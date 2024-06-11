@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}     
+header {
+background-color: #111;
+color: white;
+font-size: 24px;
+padding:20px;
+display: flex;
+justify-content: center;
+}
+main{
+background-color:#fff;
+}
+
+.page-title { 
+background-color:#f4f2f2ef;
+font-size: 40px;
+padding: 30px 0;
+text-align: center;
+}
+
+.content{
+    display: flex;
+
+    section
+    {
+        background-color: rgb(138, 144, 220);
+        flex: 1;
+        text-align: center;
+        padding: 2px;
+        width: 100%;
+        }
+        
+    aside { 
+        
+        background-color: rgb(117, 230, 91);
+        min-width: 350px;
+        text-align: center;
+        padding: 2px;
+        }
+        
+    }
+
+     table {
+
+         
+    }
