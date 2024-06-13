@@ -8,40 +8,71 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>Carrinho de compras</header>
+    <header>
+        <div class="container">
+            <h1>Encanto Lanches e Porções</h1>
+            <nav>
+                <a href="#menu">Cardápio</a>
+                <a href="#carrinho">Carrinho</a>
+            </nav>
+        </div>
+    </header>
     <main>
-<div>
- <div class="page-title">Seu Carrinho</div>
-<div class="content">
-<section>
-  <table>
-      <thead>
-      <tr>
-    <th>Produto</th>
-    <th>Preço</th>
-    <th>Quantidade</th>
-    <th>Total</th>
-    <th>Excluir</th>
-      </tr>
-      </thead>
-      <tbody>
-          <td></td>
-          <td>120</td>
-          <td>
-            <div class="qty">
-                <button>+</button>
-                <span>2</span>
-                <button>-</button>
-            </div>
-          </td>
-          <td>240</td>
-          <td> <button><i class='bx bx-x'></i></td></button>
-    </tbody>
-    </table>
- </section>
-    <section></section>
-    <aside>Resumo das Compras</aside>
-</div>
+        <div class="page-title">Seu Carrinho</div>
+        <div class="content">
+            <section class="cart">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                    <tr>
+                    <td>
+                    <div>
+                   <div class="produto"></div>
+                   <img src="https://picsum.photos/200/300" alt="">
+                   <div class="info"></div>
+                   <div class="name">Nome do Produto</div>
+                   <div class="categoria">Descrição do Produto</div>
+                    </div>
+                    </td>
+                   <td>R$120</td>
+                   <div class="qnt"></div>
+                   <button>+</button>
+                   <span>2</span>
+                   <button>-</button>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <aside class="summary">
+                <h2>Resumo das Compras</h2>
+                <p>Total: R$<span id="total-price">0.00</span></p>
+                <button>Finalizar Compra</button>
+            </aside>
+        </div>
     </main>
+    <div class="container">
+        <h1>Produtos</h1>
+        <div class="products">
+            <div class="product" data-id="1" data-name="Produto 1" data-price="10.00">
+                <h2>Produto 1</h2>
+                <p>Preço: $10.00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="2" data-name="Produto 2" data-price="20.00">
+                <h2>Produto 2</h2>
+                <p>Preço: $20.00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
