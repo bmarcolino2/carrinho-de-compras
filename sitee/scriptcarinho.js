@@ -3,9 +3,9 @@ let totalPrice = 0.00;
 
 document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => {
-        let productId = button.getAttribute('data-id');
-        let productName = button.getAttribute('data-name');
-        let productPrice = parseFloat(button.getAttribute('data-price'));
+        let productId = button.parentElement.getAttribute('data-id');
+        let productName = button.parentElement.getAttribute('data-name');
+        let productPrice = parseFloat(button.parentElement.getAttribute('data-price'));
 
         addToCart(productId, productName, productPrice);
         updateCartCount();
@@ -13,8 +13,8 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     });
 });
 
-document.getElementById('cart-btn').addEventListener('click', () => {
-    toggleCartItems();
+document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
 });
 
 function addToCart(id, name, price) {
@@ -37,11 +37,6 @@ function updateTotalPrice() {
 function updateCartCount() {
     let totalItems = Array.from(cart.values()).reduce((total, product) => total + product.quantity, 0);
     document.getElementById('cart-count').textContent = totalItems;
-}
-
-function toggleCartItems() {
-    let cartItemsContainer = document.getElementById('cart-items-container');
-    cartItemsContainer.style.display = cartItemsContainer.style.display === 'block' ? 'none' : 'block';
 }
 
 function showCartItems() {
@@ -98,10 +93,6 @@ function loadCart() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadCart);
-
-let nuloValue = 0;
-
 function aumentar(id) {
     let product = cart.get(id);
     product.quantity += 1;
@@ -115,11 +106,11 @@ function diminuir(id) {
     let product = cart.get(id);
     if (product.quantity > 1) {
         product.quantity -= 1;
-        showCartItems();
-        updateTotalPrice();
-        updateCartCount();
-        saveCart();
     } else {
         removeFromCart(id);
     }
+    showCartItems();
+    updateTotalPrice();
+    updateCartCount();
+    saveCart();
 }

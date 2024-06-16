@@ -1,0 +1,200 @@
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #FFF0D2;
+color: #333;
+}
+
+header {
+background-color: #4c0a5f;
+color: white;
+font-size: 24px;
+padding: 20px;
+text-align: center;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.page-title {
+background-color: #f4f2f2;
+font-size: 40px;
+padding: 30px 0;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.content {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 20px;
+}
+
+section.cart {
+background-color: rgb(138, 144, 220);
+flex: 2;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden; /* Para esconder a barra de rolagem no carrinho */
+}
+
+aside.summary {
+background-color: rgb(117, 230, 91);
+flex: 1;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+table-layout: fixed; /* Para manter a largura das colunas */
+}
+
+table th, table td {
+padding: 15px;
+text-align: center;
+}
+
+table th {
+background-color: #4b0082;
+color: white;
+padding: 10px;
+}
+
+table td {
+background-color: white;
+}
+
+table tr {
+border-bottom: 1px solid #ddd; /* Linha separadora mais sutil */
+}
+
+.product-info {
+display: flex;
+align-items: center;
+}
+
+.product-info img {
+margin-right: 10px;
+border-radius: 6px;
+width: 80px; /* Ajuste o tamanho da imagem */
+}
+
+.qty {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.qty button {
+background-color: #4b0082;
+color: white;
+border: none;
+padding: 5px 15px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.qty button:hover {
+background-color: #6a0dad;
+}
+
+.qty span {
+margin: 0 10px;
+font-weight: bold; /* Para destacar a quantidade */
+}
+
+button {
+background-color: #4b0082;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+background-color: #6a0dad;
+transform: scale(1.05);
+}
+
+button i.bx {
+font-size: 20px;
+}
+
+.product {
+border: 1px solid #ddd;
+padding: 1em;
+margin: 1em;
+text-align: center;
+width: calc(33% - 40px);
+transition: transform 0.2s;
+}
+
+.product:hover {
+transform: scale(1.05);
+}
+
+.add-to-cart, .cart-items-container button {
+background-color: #28a745;
+color: #fff;
+border: none;
+padding: 0.5em 1em;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.add-to-cart:hover, .cart-items-container button:hover {
+background-color: #218838;
+}
+
+.cart-items-container {
+display: none;
+background-color: #f9f9f9;
+padding: 20px;
+position: absolute;
+top: 50px;
+right: 20px;
+width: 300px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease-in-out;
+z-index: 1000; /* Para garantir que fique acima do conteúdo */
+}
+
+.remover {
+background-color: #fff;
+border: 0;
+margin: 0;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+.content {
+ flex-direction: column; /* Empilhar os elementos em dispositivos menores */
+}
+section.cart, aside.summary {
+ width: 100%; /* Utilizar toda a largura em dispositivos menores */
+}
+}
