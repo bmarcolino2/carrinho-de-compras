@@ -12,8 +12,8 @@ color: #333;
 }
 
 header {
-background-color: #4c0a5f;
-color: white;
+background-color: #406D59;
+color: #fcf6ea;
 font-size: 24px;
 padding: 20px;
 text-align: center;
@@ -26,7 +26,7 @@ padding: 20px;
 }
 
 .page-title {
-background-color: #f4f2f2;
+background-color: #FFF0D2;
 font-size: 40px;
 padding: 30px 0;
 text-align: center;
@@ -50,7 +50,8 @@ overflow: hidden; /* Para esconder a barra de rolagem no carrinho */
 }
 
 aside.summary {
-background-color: rgb(117, 230, 91);
+background-color: #fcf6ea;
+color: black;
 flex: 1;
 padding: 20px;
 border-radius: 10px;
